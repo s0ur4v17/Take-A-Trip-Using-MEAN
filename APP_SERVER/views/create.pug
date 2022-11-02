@@ -1,0 +1,65 @@
+extends layout
+
+block content
+  .row.page-header
+    .col-lg-12
+    h1(style='margin-left:40px; margin-bottom:30px; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;')= title
+      <img src="https://cdn-icons-png.flaticon.com/512/777/777242.png" width="40" height="40" style='margin-buttom:20px; margin-left:20px;'>
+    .row
+      .col-md-6.col-sm-12
+        form.form-horizontal(action=" ", method="post", role="form", style="padding-left:100px;")
+            form(method='post', action='', role='form')
+                .form-group
+                    label(for='name') Movie Name:
+                    input.form-control(type='text' name='name')
+                .form-group
+                    label(for="description") Description:
+                    textarea#type.form-control(name="description")
+                .form-group
+                    label(for="genre") Genre:
+                    select#rating.form-control.input-sm(name="genre")
+                      option Action
+                      option Comedy
+                      option Drama 
+                      option Fantasy
+                      option Horror
+                      option Mystery
+                      option Romance
+                      option Sci-Fi
+                .form-group
+                    label(for="rating") Rating:
+                    select#rating.form-control.input-sm(name="rating")
+                      option 5
+                      option 4
+                      option 3
+                      option 2
+                      option 1
+                .form-group
+                    label(for='releaseYear') Release Year:
+                    input.form-control(type='text' name='releaseYear')
+                .form-group
+                    label(for='budget') Budget (in millions):
+                    input.form-control(type='text' name='budget' placeholder="Enter numbers only")
+                .form-group
+                    label(for='image') Poster URL:
+                    input.form-control(type='text' name='image' placeholder="Paste the Poster URL for the movie")
+                .form-group
+                    label(for='rent') Rent:
+                    input.form-control(type='text' name='rent' placeholder="Enter numbers only")
+                .form-group
+                    label(for='actors') Actors:
+                    input.form-control(type='text' name='actors')
+                .form-group
+                    label(for='director') Director:
+                    input.form-control(type='text' name='director')
+                .form-group
+                    label(for='producer') Producer:
+                    input.form-control(type='text' name='producer')
+                .form-group
+                    label(for='cinematographer') Cinematographer:
+                    input.form-control(type='text' name='cinematographer')
+                .form-group
+                    label(for='composer') Composer:
+                    input.form-control(type='text' name='composer')
+                    
+                button.btn.btn-default.pull-right(type='submit') Submit

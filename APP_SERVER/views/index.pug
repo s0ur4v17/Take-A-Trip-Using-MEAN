@@ -1,0 +1,20 @@
+extends layout
+
+block content
+
+  .container-fluid
+    <img src="https://miro.medium.com/max/1400/1*5lyavS59mazOFnb55Z6znQ.png" alt="Background" style='width:100%'>
+
+  .text-center
+    h2(style='padding-top:50px') Unlimited movies, TV shows, and more. Get it right in your doorstep.
+    
+      .row
+        .col-lg-4.col-lg-offset-4
+          <div style='padding-top: 30px' class="input-group">
+            <input type="text" class="form-control" placeholder='Enter your Email Address' /> 
+            .span.input-group-btn
+                .button.btn.btn-default Go!
+          </div>
+
+      .container
+        <a href="http://localhost:3000/list/"><button style='margin-top: 40px;' type="button" class="btn btn-primary">Explore</button></a>

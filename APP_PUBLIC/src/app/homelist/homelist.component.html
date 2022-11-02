@@ -1,0 +1,28 @@
+  <div class="banner page-header">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h1>List of Packages<img src="https://cdn-icons.flaticon.com/png/512/1424/premium/1424072.png?token=exp=1646717284~hmac=d85e978d825231e563927502c297c366" width="50" height="50" style="margin-left:20px;"></h1>
+          <a routerLink="create" class="a btn btn-danger" style="margin-left:1190px;">Add a Package</a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngFor="let package of packages">
+      <div class="col-md-4">
+        <div class="card" style='width: 30rem; margin-left:60px; margin-top:40px;'>
+          <img class="img card-img-top" src={{package.image}} height="300px" style='margin-left: 95px; border: 0.5px solid #555;'>
+          <div class="card-body"> 
+            <div class="text-center">
+              <div class="h4 card-title" style="padding-left: 50px; padding-top: 20px;"> {{ package.name }} </div>
+              <div class="p card-text" style="padding-left: 50px; padding-top: 20px; color: gray;">{{ package.description }}</div>
+              <div style="padding-left: 50px; padding-top: 20px;">
+                <span *ngFor="let item of [].constructor(package.rating)" class="glyphicon glyphicon-star" style='color: orange;'></span>
+                <span *ngFor="let item of [].constructor(5 - package.rating)" class="glyphicon glyphicon-star-empty" style='color: orange;'></span><br>
+              </div>
+              <a routerLink="/packages/{{package._id}}" class="a btn btn-primary" style="margin-left: 50px; margin-top: 20px; margin-bottom: 40px;"> Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>

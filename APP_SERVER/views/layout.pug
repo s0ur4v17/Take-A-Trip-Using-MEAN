@@ -1,0 +1,38 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    link(rel='stylesheet', href='/bootstrap/css/amelia.bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    .navbar.navbar-default.navbar-fixed-top
+      .container-fluid
+        .navbar-header
+          a.navbar-brand(href='/') CineWorld
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-main')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        #navbar-main.navbar-collapse.collapse
+          ul.nav.navbar-nav
+            li
+              a(href='/list/') Movies List
+            li
+              a(href='/about/') About
+              
+    .container-fluid
+      block content
+
+      footer
+        .row 
+          .col.xs-12
+            .text-center
+              small <br><br><br><br> &copy; 2022 CineWorld.com - All Rights Reserved.
+
+    script(src='/javascripts/jquery-1.11.1.min.js')
+    script(src='/bootstrap/js/bootstrap.min.js')
+    script(src='/build/main.js')
+    script(src='/build/polyfills.js')
+    script(src='/build/runtime.js')
+    script(src='/build/vendor.js')

@@ -1,0 +1,44 @@
+extends layout
+
+block content
+  #banner.page-header
+    .row
+      .col-md-6.col-sm-12
+      .text-center
+        h1(style='margin-bottom:0px; color: #8e1821; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;')= title + '(' + movie.releaseYear + ')'
+          br
+          -for(var i=1; i <= movie.rating; i++)
+            span.glyphicon.glyphicon-star(style='color: yellow;')
+          -for(var i=movie.rating; i < 5; i++)
+            span.glyphicon.glyphicon-star-empty(style='color: yellow;')
+  .row
+    .col-md-4
+    .text-center
+      .card
+        img.card-img-top(src=movie.image style='padding-right: 430px;')
+        h3(style='padding-top:20px; padding-left:60px; text-shadow: 2px 2px 5px red;')='Get it for $' + movie.rent +'/Day.' 
+        .card-body 
+          .text-center
+            table
+              tr
+                th Genre 
+                th Description
+                th Actors
+                th Producers
+                th Director
+                th Cinematographer
+                th Composer
+                th Budget
+
+              tr 
+                td=movie.genre
+                td=movie.description
+                td=movie.crew[0].actors
+                td=movie.crew[0].producer
+                td=movie.crew[0].director
+                td=movie.crew[0].cinematographer
+                td=movie.crew[0].composer
+                td='$ ' + movie.budget + ' (in millions)' 
+            
+        a.btn.btn-default(href='/update/' + movie._id style='margin-right:10px;') Edit
+        a.btn.btn-default(href='/delete/' + movie._id style='margin-left:10px;') Delete

@@ -1,0 +1,49 @@
+<div class="banner page-header">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h1>Update Package<img src="https://cdn-icons.flaticon.com/png/512/2627/premium/2627036.png?token=exp=1646717284~hmac=d17938ae91cb61d96d921e06adc75096" width="50" height="50" style="margin-left:20px;"></h1>
+      </div>
+    </div>
+  </div>
+<div class="update_page">
+    <div class="container" style="width: 80%;">
+      <form role="form" (ngSubmit)="updatePackage(editPackage)">
+        <div class="form-group">
+            <label for="name">Package Name:</label>
+            <input [(ngModel)]="editPackage.name" class="form-control" type="text" name="name" />
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <input [(ngModel)]="editPackage.description" class="form-control" type="text" name="description" />
+        </div>
+        <div class="form-group"><label for="rating">Rating:</label><select [(ngModel)]="editPackage.rating" class="form-control input-sm" id="rating" name="rating">
+            <option>5</option>
+            <option>4</option>
+            <option>3</option>
+            <option>2</option>
+            <option>1</option>
+        </select></div>
+        <div class="form-group">
+            <label for="image">Poster URL:</label>
+            <input [(ngModel)]="editPackage.image" class="form-control" type="text" name="image" placeholder="Paste the Poster URL for the movie"/>
+        </div>
+        <div class="form-group">
+            <label for="cover">Cover URL:</label>
+            <input [(ngModel)]="editPackage.cover" class="form-control" type="text" name="cover" placeholder="Paste the Cover URL for the movie"/>
+        </div>
+        <div class="form-group">
+            <label for="duration">Duration:</label>
+            <input [(ngModel)]="editPackage.duration" class="form-control" type="text" name="duration"/>
+        </div>
+        <div class="form-group">
+            <label for="facilities">Facilities:</label>
+            <input [(ngModel)]="editPackage.facilities" class="form-control" type="text" name="facilities"/>
+        </div>
+        <div class="form-group">
+            <label for="services">Services:</label>
+            <input [(ngModel)]="editPackage.services" class="form-control" type="text" name="services"/>
+        </div>
+        <button class="btn btn-success pull-right" type="submit" style="margin-bottom: 40px;">Update</button>
+      </form>
+    </div>
+  </div>

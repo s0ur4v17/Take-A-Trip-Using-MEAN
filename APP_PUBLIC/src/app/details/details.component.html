@@ -1,0 +1,35 @@
+<div class="banner page-header">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h1 style="margin-bottom:0px;"> {{ trip.name }} <img src="https://cdn-icons.flaticon.com/png/512/1424/premium/1424072.png?token=exp=1646717284~hmac=d85e978d825231e563927502c297c366" width="50" height="50" style="margin-left:20px;"></h1>
+      </div>
+    </div>
+  </div>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="text-center">
+        <img class="img card-img-top" src={{trip.cover}} style="width: 75%; border-radius: 20px; padding-bottom: 5px;">
+        <div class="card"></div>
+        <h2 *ngFor="let item of [].constructor(trip.rating)" class="glyphicon glyphicon-star" style='color: orange;'></h2>
+        <h2 *ngFor="let item of [].constructor(5 - trip.rating)" class="glyphicon glyphicon-star-empty" style='color: orange;'></h2><br>
+        <h3 style='font-style: bold; font-family: "Montserrat"; font-size:25px; padding-top:5px; padding-left:60px; text-shadow: 2px 2px 5px rgb(44, 177, 230); '>Better Prices, Exceptional Memories.</h3>
+            <div class="text-center">
+                <table>
+                    <tr>
+                        <th>Destination</th>
+                        <th>Duration</th>
+                        <th>Facilities</th>
+                        <th>Services</th>
+                    </tr>
+                    <tr> 
+                        <td>{{ trip.name }}</td>
+                        <td>{{ trip.duration }}</td>
+                        <td>{{ trip.facilities }}</td>
+                        <td>{{ trip.services }}</td>
+                    </tr>
+                </table>
+            </div>
+            <a class="btn btn-default" routerLink="/list/update/{{trip._id}}" style='margin-right:10px;'>Edit</a>
+            <a class="btn btn-default" routerLink="/delete/{{trip._id}}" style='margin-right:10px;'>Delete</a>
+    </div>
+</div>
