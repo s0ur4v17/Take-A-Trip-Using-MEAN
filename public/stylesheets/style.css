@@ -1,0 +1,56 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.navbar {
+  padding-left: 50px;
+}
+
+footer {
+  padding-bottom: 50px;
+}
+
+h1 {
+  padding-left: 50px;
+  padding-top: 50px;
+}
+
+.card-body {
+  padding-left: 50px;
+}
+
+table, th, td {
+  border: 1px solid;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 1.2em;
+  font-family: sans-serif;
+  min-width: 400px;
+  margin-left: 150px;
+  margin-right: 200px;
+  margin-top: 50px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+ tr {
+  color: #ffffff;
+  text-align: left;
+}
+
+th {
+  text-align: center;
+  padding:20px;
+  text-shadow: 2px 2px 5px red;
+}
+
+td {
+  padding: 12px 15px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
